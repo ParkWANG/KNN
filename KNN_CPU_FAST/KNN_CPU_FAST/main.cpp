@@ -70,7 +70,7 @@ int main(int argc, const char * argv[]) {
     struct timeval tv1,tv2;
     //*--------------------------------------------------QUERY POINT CATCH--------------------------------------------*/
     //*---------------------------------------------------------------------------------------------------------------*/
-    ifstream infile_query("/Users/wangfang/Desktop/KNN/Query_Data_100-1.txt");
+    ifstream infile_query("/Users/wangfang/Documents/KNN/Query_Data_100-1.txt");
     double Query_Original_element[100][144]={0};
     double Query_Modifiyed_element[100][144]={0};
     double Query_Integer_element[100][144]={0};
@@ -108,7 +108,7 @@ int main(int argc, const char * argv[]) {
     
     for(int query_no=0; query_no<QUERYSUM; query_no++){
         
-        ifstream infile_object("/Users/wangfang/Desktop/KNN/Low_Level_Features/Normalized_CORR.dat");
+        ifstream infile_object("/Users/wangfang/Documents/KNN/Low_Level_Features/Normalized_CORR.dat");
         double Object_SUM_POW1=0;
         double Object_SUM_POW2=0;
         double Object_SUM_InnerProdcut=0;
@@ -218,7 +218,7 @@ double Exact_L2Norm_POINT_FAST_ (int Object_no, double Query_element[144],int In
     
     printf("The Exact computation object NO:%d \n",Object_no);
     double Object_L2Norm=0;
-    FILE *fp=fopen("/Users/wangfang/Desktop/KNN/Low_Level_Features/Normalized_CORR.dat", "r");
+    FILE *fp=fopen("/Users/wangfang/Documents/KNN/Low_Level_Features/Normalized_CORR.dat", "r");
     char *p;
     if (NULL == fp) {
         printf("CAN NOT OPEN THE FILE\n");
@@ -269,7 +269,7 @@ double Exact_L2Norm_POINT_FAST_ (int Object_no, double Query_element[144],int In
 
 
 double Exact_L2Norm_POINT_ (int Object_no, double Query_element[144],int Integer_bits){
-    ifstream infile_object("/Users/wangfang/Desktop/KNN/Low_Level_Features/Normalized_CORR.dat");
+    ifstream infile_object("/Users/wangfang/Documents/KNN/Low_Level_Features/Normalized_CORR.dat");
     printf("Object_NO need eact compu: %d \n",Object_no);
     double Object_L2Norm=0;
     string temp_object;
